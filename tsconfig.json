@@ -1,0 +1,8 @@
+{
+  "extends": "./.wxt/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "allowImportingTsExtensions": true,
+    "jsx": "react-jsx"
+  }
+}

@@ -1,0 +1,120 @@
+extName: Chroxy
+extDescription: Chroxy 是一个简单的代理管理扩展，允许您轻松管理和切换不同的代理配置。
+
+ok: 好
+createProfile: 创建配置
+
+# Popup
+popup:
+  options: 配置选项
+
+# Form labels
+label:
+  name: 名称
+  mode: 模式
+  color: 颜色
+  protocol: 协议
+  host: 主机
+  port: 端口
+  proxyProtocol: 协议
+  pacScriptUrl: PAC 链接
+  pacScript: PAC 脚本
+
+# Placeholders
+placeholder:
+  host: 主机地址
+  port: 端口
+  selectProtocol: 选择协议
+  profileName: 配置名称
+  mode: 模式
+
+# Protocol options
+protocol:
+  http: HTTP
+  socks5: SOCKS5
+
+# Mode options
+mode:
+  pac_script: PAC 脚本代理
+  fixed_servers: 服务器代理
+
+# Validation messages
+error:
+  nameRequired: 名称不能为空
+  hostRequired: 主机地址不能为空
+  proxyIdMissing: 代理ID缺失
+  proxyNotExist: 代理不存在
+
+# Delete confirmation
+deleteConfirmation: 确定要删除这个配置吗？
+deleteCancel: 取消
+deleteConfirm: 删除
+deleteDescription: 此操作无法撤销，将永久删除该配置。
+
+# Edit profile
+editProfileName: 编辑配置名称和颜色
+saveChanges: 保存更改
+
+# New proxy dialog
+addProfile: 添加配置
+newProfile: 创建新配置
+newProfileDescription: 请在下方输入代理配置的详细信息。确保所有字段都正确填写。
+
+# Sidebar
+chroxyIconAlt: Chroxy 图标
+manageProxiesDesc: 轻松管理您的代理。
+proxiesLabel: 代理
+allProxies: 所有代理
+aboutLabel: 关于
+copyright: © 2025 Chroxy. 保留所有权利。
+
+# About page
+aboutTitle: 关于
+chroxyLogo: Chroxy 标志
+chromeProxyManager: Chrome 代理管理器
+version: 版本
+aboutChroxy: 关于 Chroxy
+aboutDescription: 一个简单的 Chrome 代理管理扩展
+whatIsChroxy: 什么是 Chroxy？
+chroxyDescription: Chroxy 是一个轻量级的 Chrome 扩展，可以帮助您轻松管理和切换不同的代理配置。它允许您创建具有特定代理设置的配置文件，并快速在它们之间切换。
+features: 功能
+feature1: 创建和管理多个代理配置文件
+feature2: 快速切换不同配置
+feature3: 支持不同的代理协议
+feature4: 简单易用的界面
+feature5: 配置文件导入和导出
+feature6: 自定义代理绕过规则
+howToUse: 如何使用
+howToUseDesc: 导航到配置页面创建和管理您的代理配置。创建后，您可以从弹出窗口或选项页面快速启用配置文件。
+step1Title: 步骤 1：创建配置文件
+step1Desc: 前往配置页面，点击"新建配置"来设置您的代理配置。
+step2Title: 步骤 2：启用配置文件
+step2Desc: 点击配置文件来启用它，或使用扩展弹出窗口中的快速切换。
+back: 返回
+viewOnGithub: 在 GitHub 上查看
+versionInfo: 版本信息
+lastUpdated: 最后更新
+lastUpdatedDate: 2025年4月12日
+chromeStore: Chrome 商店
+viewExtension: 查看扩展
+
+# Buttons
+button:
+  save: 保存
+  cancel: 取消
+  delete: 删除
+  edit: 编辑
+
+# Profiles
+profiles:
+  title: 配置文件
+  pageTitle: 配置文件：$1
+  newProfile: 新配置文件
+  listTitle:
+    0: 没有配置文件
+    1: 已加载 1 个配置文件
+    n: 已加载 $1 个配置文件
+
+profileName:
+  system: 系统代理
+  direct: 直接连接

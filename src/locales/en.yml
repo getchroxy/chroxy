@@ -1,0 +1,120 @@
+extName: Chroxy
+extDescription: Chroxy is a simple proxy manager extension that allows you to easily manage and switch between different proxy configurations.
+
+ok: OK
+createProfile: Create profile
+
+# Popup
+popup:
+  options: Options
+
+# Form labels
+label:
+  name: Name
+  mode: Mode
+  color: Color
+  protocol: Protocol
+  host: Host
+  port: Port
+  proxyProtocol: Protocol
+  pacScriptUrl: PAC URL
+  pacScript: PAC Script
+
+# Placeholders
+placeholder:
+  host: Host
+  port: Port
+  selectProtocol: Select Protocol
+  profileName: Profile Name
+  mode: Mode
+
+# Protocol options
+protocol:
+  http: HTTP
+  socks5: SOCKS5
+
+# Mode options
+mode:
+  pac_script: PAC Script
+  fixed_servers: Fixed Server
+
+# Validation messages
+error:
+  nameRequired: Name is required
+  hostRequired: Host is required
+  proxyIdMissing: Proxy ID is missing
+  proxyNotExist: Proxy doesn't exist
+
+# Delete confirmation
+deleteConfirmation: Are you sure you want to delete this profile?
+deleteCancel: Cancel
+deleteConfirm: Delete
+deleteDescription: This action cannot be undone. This will permanently delete the profile.
+
+# Edit profile
+editProfileName: Edit profile's name & color
+saveChanges: Save changes
+
+# New proxy dialog
+addProfile: Add Profile
+newProfile: New Profile
+newProfileDescription: Enter the details for the new profile below. Make sure all fields are filled out correctly.
+
+# Sidebar
+chroxyIconAlt: Chroxy Icon
+manageProxiesDesc: Manage your proxies with ease.
+proxiesLabel: Proxies
+allProxies: All
+aboutLabel: About
+copyright: © 2025 Chroxy. All rights reserved.
+
+# About page
+aboutTitle: About
+chroxyLogo: Chroxy Logo
+chromeProxyManager: Chrome Proxy Manager
+version: Version
+aboutChroxy: About Chroxy
+aboutDescription: A simple proxy manager extension for Chrome
+whatIsChroxy: What is Chroxy?
+chroxyDescription: Chroxy is a lightweight Chrome extension that helps you manage and switch between different proxy configurations with ease. It allows you to create profiles with specific proxy settings and quickly toggle between them.
+features: Features
+feature1: Create and manage multiple proxy profiles
+feature2: Quick switching between profiles
+feature3: Support for different proxy protocols
+feature4: Easy-to-use interface
+feature5: Profile import and export
+feature6: Custom rules for proxy bypass
+howToUse: How to Use
+howToUseDesc: Navigate to the Profiles page to create and manage your proxy profiles. Once created, you can quickly enable a profile from the popup or options page.
+step1Title: "Step 1: Create Profile"
+step1Desc: Go to the Profiles page and click "New Profile" to set up your proxy configuration.
+step2Title: "Step 2: Enable Profile"
+step2Desc: Click on a profile to enable it, or use the quick toggle from the extension popup.
+back: Back
+viewOnGithub: View on GitHub
+versionInfo: Version Information
+lastUpdated: Last Updated
+lastUpdatedDate: April 12, 2025
+chromeStore: Chrome Store
+viewExtension: View Extension
+
+# Buttons
+button:
+  save: Save
+  cancel: Cancel
+  delete: Delete
+  edit: Edit
+
+# Profiles
+profiles:
+  title: Profiles
+  pageTitle: Profiles $1
+  newProfile: New Profile
+  listTitle:
+    0: No profiles
+    1: 1 Profile loaded
+    n: $1 Profiles loaded
+
+profileName:
+  system: System
+  direct: Direct
