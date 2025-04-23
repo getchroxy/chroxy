@@ -1,0 +1,56 @@
+name: Create Release and Upload Asset
+
+on:
+  push:
+    tags:
+      - "v*" # Trigger on tags starting with 'v', e.g., v1.0.0
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required to create releases and upload assets
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22" # Specify your project's Node.js version
+          cache: "yarn"
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build and zip extension
+        # This runs the 'zip' script defined in your package.json
+        run: yarn zip
+
+      - name: Get version from tag
+        id: get_version
+        # Extracts the version number from the tag (e.g., v1.2.3 -> 1.2.3)
+        run: echo "VERSION=${GITHUB_REF_NAME#v}" >> $GITHUB_OUTPUT
+
+      - name: Determine artifact path
+        id: artifact_path
+        # Assumes default wxt output: dist/<name>-<browser>-<version>.zip
+        # Defaults to chrome browser if not specified in build command
+        # Adjust 'chroxy-chrome' if your project name or target browser differs
+        run: echo "PATH=dist/chroxy-${{ steps.get_version.outputs.VERSION }}-chrome.zip" >> $GITHUB_OUTPUT
+        # If you build for multiple browsers or have a different naming scheme,
+        # you might need to adjust the path or use a glob pattern like 'dist/*.zip'
+
+      - name: Create GitHub Release and Upload Asset
+        uses: ncipollo/release-action@v1
+        with:
+          # Upload the specific zip file determined in the previous step
+          artifacts: ${{ steps.artifact_path.outputs.PATH }}
+          # Use the GITHUB_TOKEN provided by GitHub Actions
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Automatically generate release notes based on commits since the last tag
+          generateReleaseNotes: true
+          # By default, the action uses the triggering tag for the release tag and name
+          # tag: ${{ github.ref_name }}
+          # name: Release ${{ github.ref_name }}
